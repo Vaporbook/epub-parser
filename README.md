@@ -45,6 +45,286 @@ epubParser.open(epubFullPath, function (err, epubData) {
 
 Use the example with a valid epub file to see how epub-parser builds its data structure. The eyes module will help you inspect it at all levels in a clean way (it's currently a dependency).
 
+Here's an example using a sample file from Jellybooks:
+
+```javascript
+
+{
+    navMapHTML: '<ul><li><a href="safe_house_cover.html">Cover</a></li>\n<li><a href="safe_house_booktitlepage.html">Title Page</a></li>\n<li><a href="safe_house_dedication.html">Dedication</a></li>\n<li><a href="safe_house_toc.html">Table of Contents</a></li>\n<li><a href="safe_house_aboutthisbook.html">A Note on the Isle of Man</a></li>\n<li><a href="safe_house_chapter_01.html">I don’t remember much . . .</a></li>\n<li><a href="safe_house_part_01.html">Part One</a><ul><li><a href="safe_house_chapter_02.html">Chapter One</a></li>\n<li><a href="safe_house_chapter_03.html">Chapter Two</a></li>\n<li><a href="safe_house_chapter_04.html">Chapter Three</a></li>\n<li><a href="safe_house_chapter_05.html">Chapter Four</a></li>\n<li><a href="safe_house_chapter_06.html">Chapter Five</a></li>\n</ul>\n</li>\n<li><a href="jellybooks.html">Jellybooks sweet page</a></li>\n</ul>\n',
+    primaryID: {
+        name: 'BookId',
+        scheme: 'ISBN',
+        value: 'safe_house'
+    }
+}
+{
+    docTitle: [
+        {
+            text: [ 'Safe House' ]
+        }
+    ],
+    docAuthor: [
+        {
+            text: [ 'Ewan, Chris' ]
+        }
+    ],
+    $: { xmlns: 'http://www.daisy.org/z3986/2005/ncx/', version: '2005-1' },
+    navMap: [
+        {
+            navPoint: [
+                {
+                    content: [
+                        {
+                            $: { src: 'safe_house_cover.html' }
+                        }
+                    ],
+                    navLabel: [
+                        {
+                            text: [ 'Cover' ]
+                        }
+                    ],
+                    $: {
+                        class: 'chapter',
+                        playOrder: '1',
+                        id: 'navPoint-1'
+                    }
+                },
+                {
+                    content: [
+                        {
+                            $: { src: 'safe_house_booktitlepage.html' }
+                        }
+                    ],
+                    navLabel: [
+                        {
+                            text: [ 'Title Page' ]
+                        }
+                    ],
+                    $: {
+                        class: 'chapter',
+                        playOrder: '2',
+                        id: 'navPoint-2'
+                    }
+                },
+                {
+                    content: [
+                        {
+                            $: { src: 'safe_house_dedication.html' }
+                        }
+                    ],
+                    navLabel: [
+                        {
+                            text: [ 'Dedication' ]
+                        }
+                    ],
+                    $: {
+                        class: 'chapter',
+                        playOrder: '3',
+                        id: 'navPoint-3'
+                    }
+                },
+                {
+                    content: [
+                        {
+                            $: { src: 'safe_house_toc.html' }
+                        }
+                    ],
+                    navLabel: [
+                        {
+                            text: [ 'Table of Contents' ]
+                        }
+                    ],
+                    $: {
+                        class: 'chapter',
+                        playOrder: '4',
+                        id: 'navPoint-4'
+                    }
+                },
+                {
+                    content: [
+                        {
+                            $: { src: 'safe_house_aboutthisbook.html' }
+                        }
+                    ],
+                    navLabel: [
+                        {
+                            text: [ 'A Note on the Isle of Man' ]
+                        }
+                    ],
+                    $: {
+                        class: 'chapter',
+                        playOrder: '5',
+                        id: 'navPoint-5'
+                    }
+                },
+                {
+                    content: [
+                        {
+                            $: { src: 'safe_house_chapter_01.html' }
+                        }
+                    ],
+                    navLabel: [
+                        {
+                            text: [ 'I don’t remember much . . .' ]
+                        }
+                    ],
+                    $: {
+                        class: 'chapter',
+                        playOrder: '6',
+                        id: 'navPoint-6'
+                    }
+                },
+                {
+                    content: [
+                        {
+                            $: { src: 'safe_house_part_01.html' }
+                        }
+                    ],
+                    navLabel: [
+                        {
+                            text: [ 'Part One' ]
+                        }
+                    ],
+                    $: {
+                        class: 'chapter',
+                        playOrder: '7',
+                        id: 'navPoint-7'
+                    },
+                    navPoint: [
+                        {
+                            content: [
+                                {
+                                    $: { src: 'safe_house_chapter_02.html' }
+                                }
+                            ],
+                            navLabel: [
+                                {
+                                    text: [ 'Chapter One' ]
+                                }
+                            ],
+                            $: {
+                                class: 'chapter',
+                                playOrder: '8',
+                                id: 'navPoint-8'
+                            }
+                        },
+                        {
+                            content: [
+                                {
+                                    $: { src: 'safe_house_chapter_03.html' }
+                                }
+                            ],
+                            navLabel: [
+                                {
+                                    text: [ 'Chapter Two' ]
+                                }
+                            ],
+                            $: {
+                                class: 'chapter',
+                                playOrder: '9',
+                                id: 'navPoint-9'
+                            }
+                        },
+                        {
+                            content: [
+                                {
+                                    $: { src: 'safe_house_chapter_04.html' }
+                                }
+                            ],
+                            navLabel: [
+                                {
+                                    text: [ 'Chapter Three' ]
+                                }
+                            ],
+                            $: {
+                                class: 'chapter',
+                                playOrder: '10',
+                                id: 'navPoint-10'
+                            }
+                        },
+                        {
+                            content: [
+                                {
+                                    $: { src: 'safe_house_chapter_05.html' }
+                                }
+                            ],
+                            navLabel: [
+                                {
+                                    text: [ 'Chapter Four' ]
+                                }
+                            ],
+                            $: {
+                                class: 'chapter',
+                                playOrder: '11',
+                                id: 'navPoint-11'
+                            }
+                        },
+                        {
+                            content: [
+                                {
+                                    $: { src: 'safe_house_chapter_06.html' }
+                                }
+                            ],
+                            navLabel: [
+                                {
+                                    text: [ 'Chapter Five' ]
+                                }
+                            ],
+                            $: {
+                                class: 'chapter',
+                                playOrder: '12',
+                                id: 'navPoint-12'
+                            }
+                        }
+                    ]
+                },
+                {
+                    content: [
+                        {
+                            $: { src: 'jellybooks.html' }
+                        }
+                    ],
+                    navLabel: [
+                        {
+                            text: [ 'Jellybooks sweet page' ]
+                        }
+                    ],
+                    $: {
+                        class: 'chapter',
+                        playOrder: '13',
+                        id: 'navPoint-13'
+                    }
+                }
+            ]
+        }
+    ],
+    head: [
+        {
+            meta: [
+                {
+                    $: { name: 'dtb:ISBN', content: 'safe_house' }
+                },
+                {
+                    $: { name: 'dtb:generator', content: 'EPUBLib version 3.0' }
+                },
+                {
+                    $: { name: 'dtb:depth', content: '2' }
+                },
+                {
+                    $: { name: 'dtb:totalPageCount', content: '0' }
+                },
+                {
+                    $: { name: 'dtb:maxPageNumber', content: '0' }
+                }
+            ]
+        }
+    ]
+}
+
+
+```
+
+
 # Troubleshooting
 
 Epub-parser is non-validating. Therefore, it will be fairly tolerant as long as the XML is well-formed and the metadata files can be found where they're expected to be found. However, you should use the IDPF's epubcheck validator to make sure you're only using valid epubs as input.
