@@ -13,7 +13,7 @@ This depends on the xml2js and adm-zip modules.
 
 # Installing
 
-As of right now, there is now package installer. Drop the contents of the project into a directory called epub-parser, in your own module/project's node_modules directory. Then type "npm install" to install dependencies.
+As of right now, there is no package installer. Drop the contents of the project into a directory called epub-parser, in your own module/project's node_modules directory. Then type "npm install" to install dependencies.
 
 # Usage
 
