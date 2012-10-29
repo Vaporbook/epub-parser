@@ -39,8 +39,6 @@ epubParser.open(epubFullPath, function (err, epubData) {
 
 });
 
-
-
 ```
 
 # Data structure
