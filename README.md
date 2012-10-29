@@ -7,10 +7,10 @@ Epub-parser is a simple way to make working with epub files more programmer- and
 
 Specifically, it:
 
-*takes a lot of essential data from any valid Epub file and makes it available in an "easy" JSON namespace
-*converts the rest of an Epub's metadata to JSON structures, and makes that available via a "raw" namespace
-*takes care of a lot of dirty work in determining the primary ID of a file, the location of the NCX file
-*builds some boilerplate HTML you can use in your web app to display a user-friendly version of NCX data
+* takes a lot of essential data from any valid Epub file and makes it available in an "easy" JSON namespace
+* converts the rest of an Epub's metadata to JSON structures, and makes that available via a "raw" namespace
+* takes care of a lot of dirty work in determining the primary ID of a file, the location of the NCX file
+* builds some boilerplate HTML you can use in your web app to display a user-friendly version of NCX data
 
 # Requirements
 
@@ -24,6 +24,24 @@ As of right now, there is no package installer. Drop the contents of the project
 # Usage
 
 See the example directory for a sample of how to use this module.
+
+In a nutshell though, it's as simple as this:
+
+```javascript
+
+var epubParser = require('epub-parser');
+
+epubParser.open(epubFullPath, function (err, epubData) {
+
+	if(err) return console.log(err);
+	console.log(epubData.easy);
+	console.log(epubData.raw.json.ncx);
+
+});
+
+
+
+```
 
 # Data structure
 
