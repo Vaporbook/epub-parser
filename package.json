@@ -1,0 +1,22 @@
+{
+  "name":"epub-parser",
+  "version":"0.1.0",
+  "description": "Epub parser",
+  "keywords": ["epub"],
+  "homepage": "https://github.com/Vaporbook/epub-parser",
+  "bugs": {
+    "email":"aaron@readsocialapi.com"
+  },
+  "author":{ "name" : "Aaron Miller",
+             "email" : "aaron@readsocialapi.com",
+              "web" : "http://twitter.com/vaporbook"
+            },
+  "dependencies": {
+  
+  },
+  "devDependencies": {
+    "vows": "0.5.x",
+    "api-easy": "0.3.2"
+  }
+
+}
