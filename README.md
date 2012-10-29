@@ -45,7 +45,7 @@ epubParser.open(epubFullPath, function (err, epubData) {
 
 Use the example with a valid epub file to see how epub-parser builds its data structure. The eyes module will help you inspect it at all levels in a clean way (it's currently a dependency).
 
-Here's an example using a sample file from Jellybooks:
+Here's an example of the "easy" namespace using a sample file from Jellybooks:
 
 ```javascript
 
@@ -57,6 +57,15 @@ Here's an example using a sample file from Jellybooks:
         value: 'safe_house'
     }
 }
+
+
+```
+
+Here's another example showing how the NCX data structure is mapped:
+
+
+```javascript
+
 {
     docTitle: [
         {
