@@ -1,6 +1,6 @@
 {
   "name": "epub-parser",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Epub parser",
   "keywords": [
     "epub"
@@ -11,7 +11,7 @@
   },
   "author": "Aaron Miller <aaron@readsocialapi.com> (http://twitter.com/vaporbook)",
   "dependencies": {
-    "adm-zip": ">=0.0.1",
+    "node-zip": ">=0.0.2",
     "xml2js": ">=0.0.1"
   },
   "devDependencies": {
