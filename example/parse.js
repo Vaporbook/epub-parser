@@ -20,7 +20,7 @@ if(!process.argv[2]) {
 
 epubParser.open(process.argv[2], function (err, epubData) {
 
-	if(err) return console.log(err);
+	if(err) return inspect(err);
 	inspect(epubData.easy);
 	inspect(epubData.raw.json.ncx);
 
