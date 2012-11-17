@@ -1,6 +1,6 @@
 {
   "name": "epub-parser",
-  "version": "0.1.8",
+  "version": "0.1.12",
   "description": "Epub parser",
   "keywords": [
     "epub"
