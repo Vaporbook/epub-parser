@@ -21,8 +21,28 @@ if(!process.argv[2]) {
 epubParser.open(process.argv[2], function (err, epubData) {
 
 	if(err) return inspect(err);
-	inspect(epubData.easy);
-	inspect(epubData.raw.json.ncx);
+	
+  inspect(epubData.easy);
+	
+  //inspect(epubData.raw.json.ncx);
+
+
+  // uncomment the following lines to run a test of the zip lib using the included test epub
+
+  //var zip = epubParser.getZip();
+
+  //var file = zip.file('OPS/main23.xml').asText();
+
+  //inspect(file);
+
+//  if(!file.match(/-/)) {
+ //   throw "Corrupt xml file deflated from test epub. The sequence '—' is not found meaning UTF-8 was corrupted";
+ // }
+
+  //inspect(filestat);
+
+  console.log('tests passed');
+
 
 });
 

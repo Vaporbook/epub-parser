@@ -1,6 +1,6 @@
 {
   "name": "epub-parser",
-  "version": "0.1.12",
+  "version": "0.2.0",
   "description": "Epub parser",
   "keywords": [
     "epub"
@@ -15,15 +15,14 @@
     "xml2js": ">=0.0.1"
   },
   "devDependencies": {
-    "vows": "0.5.x",
-    "api-easy": "0.3.2"
+    "vows": "0.5.x"
   },
   "main": "index.js",
   "directories": {
     "example": "example"
   },
   "scripts": {
-    "test": "node example/parse.js"
+    "test": "node ./example/parse.js example/testbook.epub"
   },
   "repository": {
     "type": "git",
