@@ -9,21 +9,21 @@ Specifically, it:
 
 * takes a lot of essential data from any valid Epub file and makes it available in an "easy" JSON namespace
 * converts the rest of an Epub's metadata to JSON structures, and makes that available via a "raw" namespace
-* takes care of a lot of dirty work in determining the primary ID of a file, the location of the NCX file
-* builds some boilerplate HTML you can use in your web app to display a user-friendly version of NCX data
+* takes care of a lot of dirty work in determining the primary ID of a file, the location of the NCX file, the OPS root, etc
+* builds some boilerplate HTML you can use in your web app to display a user-friendly version of NCX data (note: this functionality is expanded in the epub2html module if you need more like it)
 
 # Requirements
 
-This depends on the xml2js and adm-zip modules.
+This depends on the xml2js and node-zip modules.
 Eyes is also required but you can use console instead if you want.
 
 # Installing
 
-As of right now, there is no package installer. Drop the contents of the project into a directory called epub-parser, in your own module/project's node_modules directory. Then type "npm install" to install dependencies.
+    npm install epub-parser
 
 # Usage
 
-See the example directory for a sample of how to use this module.
+See the example directory for a sample of how to use this module. See also the [epub2web](https://github.com/Vaporbook/epub2web), [epub-cache](https://github.com/Vaporbook/epub-cache), and [epub-editor](https://github.com/Vaporbook/epub-editor) for modules that leverage this one, and furtehr examples of how this can be used.
 
 In a nutshell though, it's as simple as this:
 
