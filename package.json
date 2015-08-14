@@ -1,15 +1,15 @@
 {
-  "name": "epub-parser",
-  "version": "0.2.5",
-  "description": "Epub parser",
+  "name": "epub3-parser",
+  "version": "0.1.0",
+  "description": "Epub parser for EPUB v2 and v3",
   "keywords": [
     "epub"
   ],
-  "homepage": "https://github.com/Vaporbook/epub-parser",
+  "homepage": "https://github.com/pabgarja/epub3-parser",
   "bugs": {
-    "email": "aaron@readsocialapi.com"
+    "email": "pabgarja@gmail.com"
   },
-  "author": "Aaron Miller <aaron@readsocialapi.com> (http://twitter.com/vaporbook)",
+  "author": "Pablo Gargallo <pabgarja@gmail.com> (http://twitter.com/pablogargallo)",
   "dependencies": {
     "node-zip": ">=0.0.2",
     "xml2js": ">=0.0.1",
@@ -28,7 +28,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/Vaporbook/epub-parser.git"
+    "url": "git://github.com/pabgarja/epub3-parser.git"
   },
   "license": "BSD"
 }

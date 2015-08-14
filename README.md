@@ -19,7 +19,7 @@ Eyes is also required but you can use console instead if you want.
 
 # Installing
 
-    npm install epub-parser
+    npm install epub3-parser
 
 # Usage
 
@@ -29,7 +29,7 @@ In a nutshell though, it's as simple as this:
 
 ```javascript
 
-var epubParser = require('epub-parser');
+var epubParser = require('epub3-parser');
 
 epubParser.open(epubFullPath, function (err, epubData) {
 
