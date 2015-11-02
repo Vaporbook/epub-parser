@@ -11,7 +11,7 @@
   },
   "author": "Aaron Miller <aaron@readsocialapi.com> (http://twitter.com/vaporbook)",
   "dependencies": {
-    "node-zip": ">=0.0.2",
+    "node-zip": "~1.1.1",
     "xml2js": ">=0.0.1",
     "request": "~2.12.0",
     "eyes": "~0.1.8"
